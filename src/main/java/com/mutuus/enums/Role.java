@@ -1,4 +1,4 @@
-package com.mutuus.user;
+package com.mutuus.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

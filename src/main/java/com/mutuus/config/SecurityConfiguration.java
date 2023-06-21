@@ -5,10 +5,10 @@ import static org.springframework.http.HttpMethod.GET;
 import static org.springframework.http.HttpMethod.POST;
 import static org.springframework.http.HttpMethod.PUT;
 
-import static com.mutuus.user.Role.ADMIN;
-import static com.mutuus.user.Role.MANAGER;
+import static com.mutuus.enums.Role.ADMIN;
+import static com.mutuus.enums.Role.MANAGER;
 
-import com.mutuus.user.Permission;
+import com.mutuus.enums.Permission;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

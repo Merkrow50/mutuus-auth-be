@@ -1,12 +1,17 @@
-package com.mutuus.user;
+package com.mutuus.model;
 
-import com.mutuus.token.Token;
+import com.mutuus.enums.Role;
+import com.mutuus.model.Token;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import java.util.Collection;
 import java.util.List;
@@ -38,6 +43,9 @@ public class User implements UserDetails {
 
   @OneToMany(mappedBy = "user")
   private List<Token> tokens;
+
+  @OneToOne
+  private Company company;
 
   @Override
   public Collection<? extends GrantedAuthority> getAuthorities() {

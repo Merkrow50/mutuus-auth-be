@@ -1,4 +1,4 @@
-package com.mutuus.token;
+package com.mutuus.enums;
 
 public enum TokenType {
   BEARER

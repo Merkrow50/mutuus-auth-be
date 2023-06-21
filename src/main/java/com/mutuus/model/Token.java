@@ -1,6 +1,6 @@
-package com.mutuus.token;
+package com.mutuus.model;
 
-import com.mutuus.user.User;
+import com.mutuus.enums.TokenType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

@@ -1,5 +1,6 @@
-package com.mutuus.token;
+package com.mutuus.repository;
 
+import com.mutuus.model.Token;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

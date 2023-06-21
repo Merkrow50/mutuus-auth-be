@@ -2,11 +2,11 @@ package com.mutuus.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mutuus.config.JwtService;
-import com.mutuus.token.Token;
-import com.mutuus.token.TokenRepository;
-import com.mutuus.token.TokenType;
-import com.mutuus.user.User;
-import com.mutuus.user.UserRepository;
+import com.mutuus.model.Token;
+import com.mutuus.repository.TokenRepository;
+import com.mutuus.enums.TokenType;
+import com.mutuus.model.User;
+import com.mutuus.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -34,6 +34,7 @@ public class AuthenticationService {
         .email(request.getEmail())
         .password(passwordEncoder.encode(request.getPassword()))
         .role(request.getRole())
+        .company(request.getCompany())
         .build();
     var savedUser = repository.save(user);
     var jwtToken = jwtService.generateToken(user);

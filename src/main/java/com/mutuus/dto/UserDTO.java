@@ -1,4 +1,4 @@
-package com.mutuus.auth;
+package com.mutuus.dto;
 
 import com.mutuus.enums.Role;
 import com.mutuus.model.Company;
@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
+public class UserDTO {
 
   private String firstname;
   private String lastname;
   private String email;
-  private String password;
   private Role role;
   private Company company;
+
 }
