@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/auth
     username: postgres
-    password: admin
+    password: senai
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

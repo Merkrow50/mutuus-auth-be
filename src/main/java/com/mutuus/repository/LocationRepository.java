@@ -1,10 +1,10 @@
 package com.mutuus.repository;
 
-import com.mutuus.model.Company;
+import com.mutuus.model.Location;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CompanyRepository extends JpaRepository<Company, Integer> {
+public interface LocationRepository extends JpaRepository<Location, Integer> {
 
 }
