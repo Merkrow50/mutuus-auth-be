@@ -1,5 +1,6 @@
 package com.mutuus.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.mutuus.enums.TokenType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,10 +13,14 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -36,7 +41,8 @@ public class Token {
 
   public boolean expired;
 
+  @JsonBackReference
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "user_id")
-  public User user;
+  private User user;
 }
